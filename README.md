@@ -16,3 +16,5 @@ For this project, we are expected to look at these concepts:
 - [Python packages](https://alx-intranet.hbtn.io/concepts/66)
 - [AirBnB clone](https://alx-intranet.hbtn.io/concepts/74)
 
+![HBNB](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20220801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220801T083528Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=4967b69e21e13b079f808f5c0b1fa96805c1c407df5ca01cfa15d15f14a635cc)
+
