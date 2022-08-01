@@ -18,5 +18,5 @@ For this project, we are expected to look at these concepts:
 
 <br>
 
-![HBNB LOGO](https://twitter.com/search?q=%23HBNB&src=hashtag_click)
+![HBNB LOGO!](https://images.app.goo.gl/KBAb7uMQpo6LHFwX8)
 
