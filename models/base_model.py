@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+# A UUID (Universal Unique Identifier) is used to uniquely identify an object on the internet.
+# datetime is a built-in python module for date and time
+# Models is the module created for this project. (it is not python in-built)
 from uuid import uuid4
 from datetime import datetime
 import models
@@ -23,6 +26,8 @@ class BaseModel():
         """
         This method initializes all attributes under the BaseModels
         """
+# *args (Non-Keyword Arguments)
+# **kwargs (Keyword Arguments)
         if kwargs:
             for key, val in kwargs.items():
                 if key != '__class__':
