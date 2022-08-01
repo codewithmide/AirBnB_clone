@@ -22,3 +22,17 @@ class FileStorage:
         return all
         """
         return self.__objects
+
+    def reload(self):
+        class_dict = {
+            "BaseModel": BaseModel,
+        }
+
+        try:
+            with open(self.__file_path, 'r', encoding='UTF-8') as file:
+                json_read = json.load(file)
+                for keys, value in json_read.items():
+                    class_name = value["__class__"]
+                    self.new(class_dict[class_name](**value))
+        except FileNotFoundError:
+            pass
