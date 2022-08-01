@@ -35,11 +35,11 @@ class BaseModel():
                     if hasattr(self, 'created_at') and type(
                             self.created_at) is str:
                         self.created_at = datetime.strptime(
-                            kwargs["created_at"], fdate)
+                            kwargs["created_at"], fdateAndTime)
                     if hasattr(self, 'updated_at') and type(
                             self.updated_at) is str:
                         self.updated_at = datetime.strptime(
-                            kwargs["updated_at"], fdate)
+                            kwargs["updated_at"], fdateAndTime)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
