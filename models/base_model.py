@@ -53,3 +53,27 @@ class BaseModel():
         """
         return ('[{}] ({}) {}'.
                 format(self.__class__.__name__, self.id, self.__dict__))
+
+    def __repr__(self):
+        """
+        This public instance method returns a string representation
+        """
+        return self.__str__()
+
+    def save(self):
+        """
+        updates the attribute updated_at with the current date and time
+        """
+        self.updated_at = datetime.now()
+        models.storage.save()
+
+    def to_dict(self):
+        """
+        returns a dictionary containing all keys/values
+        of __dict__ of the instance:
+        """
+        dictionary = self.__dict__.copy()
+        dictionary['__class__'] = self.__class__.__name__
+        dictionary['created_at'] = self.created_at.isoformat()
+        dictionary['updated_at'] = self.updated_At.isoformat()
+        return dictionary
