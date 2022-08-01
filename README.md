@@ -17,4 +17,6 @@ For this project, we are expected to look at these concepts:
 - [AirBnB clone](https://alx-intranet.hbtn.io/concepts/74)
 
 <br>
-![HBNB LOGO](https://github.com/02KellyV/AirBnB_clone)
+
+![HBNB LOGO](https://twitter.com/search?q=%23HBNB&src=hashtag_click)
+
