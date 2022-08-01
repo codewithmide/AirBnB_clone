@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# A UUID (Universal Unique Identifier) is used to uniquely identify an object on the internet.
+# A UUID (Universal Unique Identifier) is used to uniquely identify an object.
 # datetime is a built-in python module for date and time
 # Models is the module created for this project. (it is not python in-built)
 from uuid import uuid4
@@ -16,7 +16,7 @@ fdateAndTime = "%Y-%m-%dT%H:%M:%S.%f"
 
 class BaseModel():
     """
-    A class BaseModel that defines all common attributes/methods for other classes:
+    A class that defines all common attributes/methods for other classes:
     Public instance attributes:
     id: string - assign with an uuid when an instance is created
     The goal is to have a unique id for each BaseModel
