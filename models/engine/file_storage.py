@@ -23,6 +23,11 @@ class FileStorage:
         """
         return self.__objects
 
+    def new(self, obj):
+        # BaseModel.12121212
+        key = f"{type(obj).__name__}.{obj.id}"
+        self.__objects[key] = obj
+
     def reload(self):
         class_dict = {
             "BaseModel": BaseModel,
