@@ -144,4 +144,4 @@ $
 ```
 All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
 
-![FIRST STEP](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20220801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220801T083528Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=2206c4c0afab6aa6ec628df739de60f9670426b94988d752af64d2afca78ae16)
+![STES](https://camo.githubusercontent.com/ea135bbd4ba36af968b714bb3ec2d299c4b166bf0e158fd46a299c6cd442b695/68747470733a2f2f696d6775722e636f6d2f337243503546782e706e67)
