@@ -18,5 +18,5 @@ For this project, we are expected to look at these concepts:
 
 <br>
 
-![HBNB LOGO!](https://images.app.goo.gl/KBAb7uMQpo6LHFwX8)
+![HBNB LOGO](https://camo.githubusercontent.com/dd07bdb5f1d850f43898037ed8f72e1d53af03841b08cabf09303f5902c3509f/68747470733a2f2f692e6962622e636f2f64354e38354e682f68626e622e706e67)
 
