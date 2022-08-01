@@ -1,8 +1,8 @@
 # 0x00. AirBnB clone - The console
 `Group project` `Python` `OOP`
 
-|:--                                                                                   |
 |By Guillaume									       |
+|:--										       |
 |Weight: 5									       |
 |Project to be done in teams of 2 people (your team: olumide adeyanju, Olumide Micheal |
 |Ongoing project - started Aug 1, 2022, must end by Aug 8, 2022			       |
