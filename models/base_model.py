@@ -23,3 +23,28 @@ class BaseModel():
         """
         This method initializes all attributes under the BaseModels
         """
+        if kwargs:
+            for key, val in kwargs.items():
+                if key != '__class__':
+                    setattr(self, key, val)
+                    if hasattr(self, 'created_at') and type(
+                            self.created_at) is str:
+                        self.created_at = datetime.strptime(
+                            kwargs["created_at"], fdate)
+                    if hasattr(self, 'updated_at') and type(
+                            self.updated_at) is str:
+                        self.updated_at = datetime.strptime(
+                            kwargs["updated_at"], fdate)
+        else:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
+            models.storage.new(self)
+
+    def __str__(self):
+        """
+        This public instance method should print:
+        [<class name>] (<self.id>) <self.__dict__>
+        """
+        return ('[{}] ({}) {}'.
+                format(self.__class__.__name__, self.id, self.__dict__))
