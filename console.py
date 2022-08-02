@@ -17,6 +17,7 @@ class HBNBCommand(cmd.Cmd):
     classes = {"BaseModel"}
 
 # quit and EOF to exit the program
+
     def do_EOF(self, line):
         """
         End-Of-File command to exit the program
@@ -28,6 +29,25 @@ class HBNBCommand(cmd.Cmd):
         Quit command to exit the program
         """
         return True
+
+    def do_create(self, line):
+        """
+        Creates a new instance of BaseModel,
+        saves it (to the JSON file) and prints the id.
+        Example: $ create BaseModel
+        """
+# If the class name is missing, print ** class name missing ** (ex: $ create)
+# If the class name doesn’t exist, print ** class doesn't exist **
+# (ex: $ create MyModel)
+        try:
+            new_instance = eval(line)()
+            new_instance.save()
+            print(new_instance.id)
+        except SyntaxError:
+            print("** class name missing **")
+        except NameError:
+            print("** class doesn't exist **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
