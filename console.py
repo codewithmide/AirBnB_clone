@@ -48,6 +48,74 @@ class HBNBCommand(cmd.Cmd):
         except NameError:
             print("** class doesn't exist **")
 
+    def do_show(self, line):
+        """
+        Prints the string representation
+        of an instance based on the class name and id.
+        Ex: $ show BaseModel 1234-1234-1234.
+        """
+        if line:
+            args = line.split(" ")
+            if args[0] not in self.classes:
+                print("** class doesn't exist **")
+# If the class name doesn’t exist, print ** class doesn't exist **
+# (ex: $ show MyModel)
+                return
+            if len(args) < 2:
+                print("** instance id missing **")
+# If the id is missing, print ** instance id missing **
+# (ex: $ show BaseModel)
+                return
+            key = args[0] + "." + args[1]
+            obje = storage.all()
+            if key not in obje:
+                print("** no instance found **")
+# If the instance of the class name doesn’t exist for the id,
+# print ** no instance found ** (ex: $ show BaseModel 121212)
+                return
+            print(obje[key])
+        else:
+            print('** class name missing **')
+# If the class name is missing, print ** class name missing **
+# (ex: $ show)
+
+    def do_destroy(self, line):
+        """
+        Deletes an instance based on the class name
+        and id (save the change into the JSON file).
+        Ex: $ destroy BaseModel 1234-1234-1234.
+        """
+        if line:
+            args = line.split(" ")
+            if args[0] not in self.classes:
+                # If the class name doesn’t exist,
+                # print ** class doesn't exist **
+                # (ex:$ destroy MyModel)
+                print("** class doesn't exist **")
+                return
+            if len(args) < 2:
+                # If the id is missing,
+                # print ** instance id missing **
+                # (ex: $ destroy BaseModel)
+                print("** instance id missing **")
+                return
+            key = args[0] + "." + args[1]
+            obje = storage.all()
+            if key not in obje:
+                # If the instance of the class name
+                # doesn’t exist for the id
+                # print ** no instance found **
+                # (ex: $ destroy BaseModel 121212)
+                print("** no instance found **")
+                return
+            del obje[key]
+            storage.save()
+        else:
+            # If the class name is missing,
+            # print ** class name missing **
+            # (ex: $ destroy)
+            print('** class name missing **')
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
