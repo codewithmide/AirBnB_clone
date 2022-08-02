@@ -116,6 +116,33 @@ class HBNBCommand(cmd.Cmd):
             # (ex: $ destroy)
             print('** class name missing **')
 
+    def do_all(self, line):
+        """
+        Prints all string representation of all instances
+        based or not on the class name.
+        Ex: $ all BaseModel or $ all
+        """
+        my_list = []
+        objs = storage.all()
+        if line:
+            args = line.split(" ")
+            if args[0] not in self.classes:
+                # If the class name doesn’t exist,
+                # print ** class doesn't exist **
+                # (ex: $ all MyModel)
+                print("** class doesn't exist **")
+                return
+            for key in objs:
+                split_key = key.split(".")
+                if split_key[0] == args[0]:
+                    my_list.append(str(objs[key]))
+            print(my_list)
+        else:
+            for key in objs:
+                my_list.append(str(objs[key]))
+            print(my_list)
+            # The printed result must be a list of strings
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
