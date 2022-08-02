@@ -2,12 +2,14 @@
 """
 BaseModel unittest
 """
+
+from models.base_model import BaseModel
 import unittest
 import datetime
 import json
 import os
 import uuid
-from models import BaseModel
+from io import StringIO
 
 
 # call the unittest function inside the BaseModel class
