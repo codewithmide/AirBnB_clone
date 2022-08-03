@@ -6,6 +6,7 @@ import cmd
 from models.base_model import BaseModel
 from datetime import datetime
 from models.engine.file_storage import FileStorage
+from models.user import User
 import json
 
 
