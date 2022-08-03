@@ -4,7 +4,7 @@ Storage for all files
 """
 import json
 from datetime import datetime
-from models.base_model import BaseModel
+import models
 
 
 class FileStorage:
