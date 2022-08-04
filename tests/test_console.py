@@ -135,11 +135,11 @@ class test_console(unittest.TestCase):
 
     def test_destroy(self):
         console = self.create()
-        self.assertTrue(console.onecmd("destroy"))
+        self.assertFalse(console.onecmd("destroy"))
 
     def test_update(self):
         console = self.create()
-        self.assertTrue(console.onecmd("update"))
+        self.assertFalse(console.onecmd("update"))
 
 
 if __name__ == "__main__":
