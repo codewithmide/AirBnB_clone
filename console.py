@@ -29,7 +29,7 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def do_EOF(self, args):
-        """Salir del interprete exit the program"""
+        """exit the program"""
         print("")
         return True
 
@@ -38,7 +38,7 @@ class HBNBCommand(cmd.Cmd):
         print("Exits the program without formatting\n")
 
     def do_quit(self, args):
-        """Salir del interprete exit the program"""
+        """exit the program"""
         return(True)
 
     def help_quit(self):
