@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """
-Class HBNBCCommand
+Class HBNBCommand
 """
+
 import cmd
-import models
+import sys
+import shlex
 from models import storage
 from models.base_model import BaseModel
 from models.user import User
@@ -14,141 +16,190 @@ from models.place import Place
 from models.review import Review
 
 
+classes = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+
+
 class HBNBCommand(cmd.Cmd):
-    """Interprete de comandos"""
+    """
+    Entry point of the command interpreter
+    """
+
     prompt = "(hbnb) "
 
-    class_dict = {
-        "BaseModel": BaseModel,
-        "User": User,
-        "State": State,
-        "City": City,
-        "Amenity": Amenity,
-        "Place": Place,
-        "Review": Review
-    }
+    def do_quit(self, arg):
+        """Quit command to exit the program
+        """
 
-    def do_EOF(self, args):
-        """exit the program"""
-        print("")
-        return True
+        sys.exit()
 
-    def help_EOF(self):
-        """ Prints the help documentation for EOF """
-        print("Exits the program without formatting\n")
+    def do_EOF(self, arg):
+        """Terminates the program Usage: ctrl+D or writting EOF
+        """
 
-    def do_quit(self, args):
-        """exit the program"""
-        return(True)
-
-    def help_quit(self):
-        """ Prints the help documentation for quit  """
-        print("Exits the program with formatting\n")
+        sys.exit()
 
     def emptyline(self):
-        """ Overrides the emptyline method of CMD """
+        """
+        Do nothing
+        """
+
         pass
 
-    def do_count(self, line_args_obj):
-        args = line_args_obj.split()
-        if args[0] not in classes:
-            return
-        else:
-            count = 0
-            keys = models.storage.all().keys()
-            for key in keys:
-                lenght = len(args[0])
-                if key[:lenght] == args[0]:
-                    count += 1
-            print(count)
+    def do_create(self, arg):
+        """Creates a new instance of class and prints the id.
 
-    def do_create(self, line):
-        """Create a object"""
-        if len(line) == 0:
+Usage: create <class name>
+        """
+
+        args = shlex.split(arg)
+        if args == []:
             print("** class name missing **")
-            return
-        try:
-            nueva_inst = HBNBCommand.class_dict[line]()
-            nueva_inst.save()
-            print(nueva_inst.id)
-        except Exception as fail:
-            print("** class doesn't exist **")
-
-    def do_show(self, line):
-        """ print the instan str"""
-        line_tokens = line.split()
-        if len(line_tokens) == 0 or line is None:
-            print("** class name missing **")
-            return
-        elif line_tokens[0] not in (HBNBCommand.class_dict.keys()):
-            print("** class doesn't exist **")
-        elif len(line_tokens) == 1:
-            print("** instance id missing **")
-        elif len(line_tokens) == 2:
-            BM_id = f"{line_tokens[0]}.{line_tokens[1]}"
-            if BM_id in models.storage.all():
-                print(models.storage.all()[BM_id])
-            else:
-                print("** no instance found **")
-
-    def do_destroy(self, line):
-        """ delete an object"""
-        line_tokens = line.split()
-        if len(line_tokens) == 0:
-            print("** class name missing **")
-        elif line_tokens[0] not in (HBNBCommand.class_dict.keys()):
-            print("** class doesn't exist **")
-        elif len(line_tokens[1]) == 0:
-            print("** instance id missing **")
-        elif len(line_tokens) == 2:
-            BM_id = f"{line_tokens[0]}.{line_tokens[1]}"
-            if BM_id in models.storage.all():
-                del models.storage.all()[BM_id]
-                models.storage.save()
-            else:
-                print("** no instance found **")
-
-    def do_all(self, line):
-        """ print the instan str"""
-        class_prin = []
-        line_tokens = line.split()
-        if len(line_tokens) == 0:
-            for obj in storage.all().values():
-                class_prin.append(str(obj))
-            print(class_prin)
-        elif line_tokens[0] not in (HBNBCommand.class_dict.keys()):
+        elif args[0] not in classes:
             print("** class doesn't exist **")
         else:
-            for obj in storage.all().values():
-                if line_tokens[0] == obj.__class__.__name__:
-                    class_prin.append(str(obj))
-            print(class_prin)
+            new = eval(args[0])()
+            new.save()
+            print(new.id)
 
-    def do_update(self, line):
-        """ adding or updating attributes """
-        line_tokens = line.split()
-        id_token = line_tokens[0] + "." + line_tokens[1]
-        if len(line_tokens) == 0:
+    def do_show(self, arg):
+        """Prints the string representation of an instance\
+ based on the class name and id.
+
+Usage: show <class name> <id>
+        """
+
+        args = shlex.split(arg)
+        if len(args) > 1:
+            key = args[0] + "." + args[1]
+        if len(args) == 0:
             print("** class name missing **")
-        elif line_tokens[0] not in HBNBCommand.class_dict.keys():
+        elif args[0] not in classes:
             print("** class doesn't exist **")
-        elif len(line_tokens) == 1:
+        elif len(args) == 1:
             print("** instance id missing **")
-        elif id_token not in (storage.all().keys()):
+        elif key not in storage.all():
             print("** no instance found **")
-        elif len(line_tokens) == 2:
+        else:
+            print(storage.all()[key])
+
+    def do_destroy(self, arg):
+        """Deletes an instance based on the class name and id.
+
+Usage: destroy <class name> <id>
+        """
+
+        args = shlex.split(arg)
+        if len(args) > 1:
+            key = args[0] + "." + args[1]
+        if len(args) == 0:
+            print("** class name missing **")
+        elif args[0] not in classes:
+            print("** class doesn't exist **")
+        elif len(args) == 1:
+            print("** instance id missing **")
+        elif key not in storage.all():
+            print("** no instance found **")
+        else:
+            del storage.all()[key]
+            storage.save()
+
+    def do_all(self, arg):
+        """Prints all string representation of all\
+ instances based or not on the class name.
+
+Usage: all <class name> - to print all instances of a class\
+ or all - to print all instances.
+        """
+
+        args = shlex.split(arg)
+        if args:
+            if args[0] not in classes:
+                print("** class doesn't exist **")
+                return
+            inst_list = []
+            for key in storage.all():
+                cls_name = key.split(".")[0]
+                if cls_name == args[0]:
+                    inst_list.append(str(storage.all()[key]))
+            print(inst_list)
+            return
+        inst_list = []
+        for key in storage.all():
+            inst_list.append(str(storage.all()[key]))
+        print(inst_list)
+
+    def do_update(self, arg):
+        """Updates an instance based on the class name\
+ and id by adding or updating attribute.
+
+Usage: update <class name> <id> <attribute name> "<attribute value>"
+        """
+
+        args = shlex.split(arg)
+        if len(args) > 1:
+            key = args[0] + "." + args[1]
+        if len(args) == 0:
+            print("** class name missing **")
+        elif args[0] not in classes:
+            print("** class doesn't exist **")
+        elif len(args) == 1:
+            print("** instance id missing **")
+        elif key not in storage.all():
+            print("** no instance found **")
+        elif len(args) == 2:
             print("** attribute name missing **")
-        elif len(line_tokens) == 3:
+        elif len(args) == 3:
             print("** value missing **")
         else:
-            all_objs = storage.all()
-            cr_obj = all_objs[id_token]
-            setattr(
-                cr_obj,
-                line_tokens[2],
-                line_tokens[3]
-            )
-            cr_obj.save()
+            setattr(storage.all()[key], args[2], args[3])
+            storage.all()[key].save()
+
+    def default(self, arg):
+        """
+        Implementation of:
+        <class name>.all() - to retrieve all instances of a class
+        <class name>.count() - to retrieve the number of instances of a class
+        <class name>.show(<id>) - to retrieve an instance based on its ID
+        <class name>.destroy(<id>) - to destroy an instance based on his ID
+        <class name>.update(<id>, <attribute name>, <attribute value>)
+        """
+
+        count = 0
+
+        try:
+            args = arg.split(".")
+            cls_name = args[0]
+            command = args[1]
+            if command == "all()":
+                self.do_all(cls_name)
+                return
+            elif command == "count()":
+                for instances in storage.all():
+                    if instances.split(".")[0] == cls_name:
+                        count += 1
+                print(count)
+                return
+            cmmd = command.split("(")[0]
+            args = command.split("(")[1]
+            if cmmd == "show" and args[-1] == ")":
+                id = args[:-1]
+                showArg = f"{cls_name} {id}"
+                self.do_show(showArg)
+                return
+            if cmmd == "destroy" and args[-1] == ")":
+                id = args[:-1]
+                destroyArg = f"{cls_name} {id}"
+                self.do_destroy(destroyArg)
+                return
+            if cmmd == "update" and args[-1] == ")":
+                args = command.split("(")[1]
+                args = args.replace(",", "")
+                updateArg = f"{cls_name} {args[:-1]}"
+                self.do_update(updateArg)
+                return
+            print(f"*** Unknown syntax {arg}")
+        except Exception:
+            print(f"*** Unknown syntax {arg}")
 
 
 if __name__ == '__main__':
