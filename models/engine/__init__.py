@@ -2,3 +2,4 @@
 """
 Initializes the package
 """
+from models import *
