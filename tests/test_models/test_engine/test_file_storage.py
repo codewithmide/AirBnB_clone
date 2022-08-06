@@ -2,11 +2,11 @@
 """
 Test file for the base_mode class
 """
-
 import unittest
 from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
 import os
+
 
 class TestClass(unittest.TestCase):
     """Test cases"""
