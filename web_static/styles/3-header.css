@@ -5,7 +5,10 @@ header {
     border-bottom: solid 1px #CCCCCC;
 }
 
-header img {
+.logo {
+    width: auto;
+    height: inherit;
+    background-image: url(../images/logo.png);
     background-repeat: no-repeat;
     margin-left: 20px;
 }
