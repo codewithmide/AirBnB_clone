@@ -37,17 +37,51 @@ button:hover {
     float: left;
 }
 
-h3 {
+.amenities h3, .locations h3 {
     font-weight: 600;
     margin: 0;
     margin-top: 13px;
     margin-left: 30px;
 }
 
-h4 
-{
+.amenities h4, .locations h4 {
     font-weight: 400;
     font-size: 14px;
     margin-top: 0;
     margin-left: 30px;
+}
+
+.locations .popover {
+    background-color: #FAFAFA;
+    border: solid #DDDDDD 1px;
+    list-style: none;
+    visibility: hidden;
+}
+
+.amenities .popover {
+    background-color: #FAFAFA;
+    border: solid #DDDDDD 1px;
+    list-style: none;
+    visibility: hidden;
+}
+
+.popover li h2{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style-type: none;
+    padding-bottom: 5%;
+}
+ul{
+    padding-top: 30px;
+}
+.locations:hover >.popover{
+    visibility: visible;
+    margin-bottom: 50px;
+}
+
+.amenities:hover > .popover{
+    visibility: visible;
 }
