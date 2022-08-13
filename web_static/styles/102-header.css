@@ -1,0 +1,144 @@
+header {
+    color: white;
+    height: 70px;
+    width: 100%;
+    border-bottom: solid 1px #CCCCCC;
+}
+
+.logo {
+    width: auto;
+    height: inherit;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    header {
+        height: 35px;
+    }
+    
+    .logo {
+        background-size: 80px;
+        margin-left: 10px;
+    }
+}
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    header {
+        height: 40px;
+    }
+    
+    .logo {
+        background-size: 85px;
+        margin-left: 10px;
+    }
+}
+
+/* ----------- Galaxy Note 3 and S6 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    header {
+        height: 35px;
+    }
+    
+    .logo {
+        background-size: 80px;
+        margin-left: 10px;
+    }
+}
+
+/* ----------- Google Pixel 2 XL ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 411px) 
+  and (device-height: 823px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+    header {
+        height: 35px;
+    }
+    
+    .logo {
+        background-size: 100px;
+        margin-left: 10px;
+    }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    header {
+        height: 80px;
+    }
+    
+    .logo {
+        background-size: 180px;
+        margin-left: 10px;
+    }
+}
+
+/* ----------- iPad Pro ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+        height: 80px;
+    }
+    
+    .logo {
+        background-size: 180px;
+        margin-left: 10px;
+    }
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+        height: 100px;
+    }
+    
+    .logo {
+        background-size: 200px;
+        margin-left: 10px;
+    }
+}
