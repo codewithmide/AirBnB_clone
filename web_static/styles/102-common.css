@@ -10,9 +10,7 @@ body {
 /* Portrait */
 @media only screen 
   and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
+  and (max-device-width: 736px) {
     body {
         margin: 0;
         padding: 0;
@@ -26,9 +24,7 @@ body {
 /* Portrait */
 @media only screen 
   and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
+  and (max-device-width: 812px) { 
     body {
         margin: 0;
         padding: 0;
@@ -41,9 +37,7 @@ body {
 /* Portrait */
 @media screen 
   and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
-  and (orientation: portrait) {
+  and (device-height: 640px) {
     body {
         margin: 0;
         padding: 0;
@@ -56,9 +50,7 @@ body {
 /* Portrait */
 @media screen 
   and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: portrait) {
+  and (device-height: 640px) {
 body {
         margin: 0;
         padding: 0;
@@ -71,9 +63,7 @@ body {
 /* Portrait */
 @media screen 
   and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
-  and (orientation: portrait) {
+  and (device-height: 640px) {
 body {
         margin: 0;
         padding: 0;
@@ -87,9 +77,7 @@ body {
 /* Portrait */
 @media screen 
   and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: portrait) {
+  and (device-height: 640px) {
 body {
         margin: 0;
         padding: 0;
@@ -102,9 +90,7 @@ body {
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (max-device-width: 1024px) {
 body {
         margin: 0;
         padding: 0;
@@ -117,9 +103,7 @@ body {
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (max-device-width: 1024px) {
 body {
         margin: 0;
         padding: 0;
@@ -134,9 +118,7 @@ body {
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen 
   and (min-device-width: 834px) 
-  and (max-device-width: 834px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (max-device-width: 834px) {
 body {
         margin: 0;
         padding: 0;
@@ -151,48 +133,8 @@ body {
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen 
   and (min-device-width: 1024px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (max-device-width: 1024px) {
 body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-}
-
-/* ----------- Galaxy Tab 2 ----------- */
-
-/* Portrait */
-@media 
-  (max-device-width: 800px) 
-  and (orientation: portrait) { 
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-}
-
-/* ----------- Galaxy Tab S ----------- */
-
-/* Portrait */
-@media 
-  (max-device-width: 800px) 
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2) { 
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-}
-
-/* ----------- Moto 360 Watch ----------- */
-@media 
-  (max-device-width: 218px)
-  and (max-device-height: 281px) { 
-    body {
         margin: 0;
         padding: 0;
         overflow-x: hidden;
