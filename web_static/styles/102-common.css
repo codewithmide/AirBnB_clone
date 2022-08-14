@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait */
