@@ -1,27 +1,29 @@
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 .places h1{
     font-size: 30px;
+    width: 100%;
     text-align: left;
     margin-left: 30px;
 }
 
-article {
+.places article {
     width: 390px;
     padding: 20px;
     margin: 20px;
     border: #FF5A5F 1px solid;
     border-radius: 4px;
     display: inline-block;
-    align-items: center;
-    justify-content: center;
-}
-article:nth-last-child(1) {
-    margin-left: 25%;
-    margin-bottom: 4rem;
+    position: relative;
 }
 
 .places h2 {
     font-size: 30px;
-    margin-top: 0;
     text-align: center;
 }
 
