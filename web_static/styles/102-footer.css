@@ -1,12 +1,25 @@
+footer {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  border-top: solid 1px #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+}
+
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait */
 @media only screen 
   and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
-    
+  and (max-device-width: 736px) {
+    footer {
+      font-size: 11.5px;
+    }
 }
 
 
@@ -15,21 +28,46 @@
 /* Portrait */
 @media only screen 
   and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
+  and (max-device-width: 812px) { 
+    footer {
+      font-size: 11.5px;
+    }
 }
+
+/* ----------- iPhone SE ----------- */
+
+/* Potrait */
+
+@media screen 
+  and (device-width: 375px) 
+  and (device-height: 667px) {
+    footer {
+      font-size: 12.5px;
+    }
+}
+
+/* ----------- iPhone XR ----------- */
+
+/* Potrait */
+
+@media screen 
+  and (device-width: 414px) 
+  and (device-height: 896px) {
+    footer {
+      font-size: 12.5px;
+    }
+}
+
 
 /* ----------- Note 3 and S6 ----------- */
 
 /* Portrait */
 @media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
-  and (orientation: portrait) {
-
+  and (device-width: 360px) 
+  and (device-height: 640px) {
+    footer {
+      font-size: 11.5px;
+    }
 }
 
 
@@ -37,57 +75,67 @@
 
 /* Portrait */
 @media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: portrait) {
-
+  and (device-width: 411px) 
+  and (device-height: 823px){
+    footer {
+      font-size: 12.5px;
+    }
 }
 
-/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- Samsung S8+ ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) {
+    footer {
+      font-size: 12.5px;
+    }
+}
+
+
+/* ----------- Google Pixel 5 ----------- */
+
+/* Potrait */
+@media screen 
+  and (device-width: 393px) 
+  and (device-height: 851px){
+    footer {
+      font-size: 12.5px;
+    }
+}
+
+/* ----------- iPad Mini ----------- */
 
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (max-device-width: 1024px)  {
+    footer {
+      font-size: 15.5px;
+    }
+}
 
+
+/* ----------- iPad Air ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 820px) 
+  and (max-device-width: 1180px)  {
+    footer {
+      font-size: 18.5px;
+    }
 }
 
 /* ----------- iPad Pro ----------- */
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- iPad Pro 10.5" ----------- */
-
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 834px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
   and (min-device-width: 1024px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+  and (max-device-width: 1366px)  {
+    footer {
+      font-size: 20px;
+    }
 }
+
