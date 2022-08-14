@@ -1,6 +1,7 @@
 .places h1{
     font-size: 30px;
     text-align: left;
+    margin-left: 30px;
 }
 
 article {
@@ -96,55 +97,34 @@ article:nth-last-child(1) {
     text-align: left;
 }
 
-ul {
-    margin-left: -2rem;
-}
-
 .amenitie li {
     list-style: none;
-    gap: 1rem;
 }
 
 .first_icon {
     background-image: url(../images/icon_wifi.png);
     background-position: left;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 50px;
-}
-
-.first_icon p {
-    position: relative;
-    top: 1rem;
-    left: 4rem;
-}
-
-.second_icon p {
-    position: relative;
-    top: 1rem;
-    left: 4rem;
-}
-
-.third_icon p {
-    position: relative;
-    top: 1rem;
-    left: 4rem;
+    height: 20px;
+    background-size: contain;
+    padding-left: 25px;
 }
 
 .second_icon {
     background-image: url(../images/icon_tv.png);
     background-position: left;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 50px;
+    height: 20px;
+    background-size: contain;
+    padding-left: 25px;
 }
 
 .third_icon {
     background-image: url(../images/icon_pets.png);
     background-repeat: no-repeat;
-    width: 100%;
-    width: 100%;
-    height: 50px;
+    height: 20px;
+    background-size: contain;
+    padding-left: 25px;
 }
 
 /*REVIEWS*/
