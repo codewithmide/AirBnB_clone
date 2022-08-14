@@ -1,5 +1,13 @@
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 .places h1{
     font-size: 30px;
+    width: 100%;
     text-align: left;
 }
 
@@ -9,12 +17,10 @@
     margin: 20px;
     border: #FF5A5F 1px solid;
     border-radius: 4px;
-    display: inline-block;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-article:nth-last-child(1) {
-    margin-left: 25%;
+    text-align: center;
 }
 
 .places h2 {
