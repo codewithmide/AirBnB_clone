@@ -21,7 +21,7 @@
 
 }
 
-/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+/* ----------- Note 3 and S6 ----------- */
 
 /* Portrait */
 @media screen 
@@ -32,30 +32,8 @@
 
 }
 
-/* ----------- Galaxy S6 ----------- */
 
-/* Portrait */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: portrait) {
-
-}
-
-/* ----------- Google Pixel ----------- */
-
-/* Portrait */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
-  and (orientation: portrait) {
-
-}
-
-
-/* ----------- Google Pixel XL ----------- */
+/* ----------- Google Pixel 2 XL ----------- */
 
 /* Portrait */
 @media screen 
@@ -77,7 +55,7 @@
 
 }
 
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* ----------- iPad Pro ----------- */
 
 /* Portrait */
 @media only screen 
@@ -111,31 +89,5 @@
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- Galaxy Tab 2 ----------- */
-
-/* Portrait */
-@media 
-  (max-device-width: 800px) 
-  and (orientation: portrait) { 
-
-}
-
-/* ----------- Galaxy Tab S ----------- */
-
-/* Portrait */
-@media 
-  (max-device-width: 800px) 
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
-}
-
-/* ----------- Moto 360 Watch ----------- */
-@media 
-  (max-device-width: 218px)
-  and (max-device-height: 281px) { 
 
 }
