@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    background: url(./images/bg-pattern-desktop.svg);
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.inner {
+    width: 500px;
+}
+
+.texts {
+    width: 60%;
+    height: 100%;
+    padding: 4rem 0 0 10rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    margin-bottom: 6rem;
+}
+
+.header-img {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+}
+
+h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 1;
+    color: hsl(0, 6%, 24%);
+    font-weight: 400;
+}
+
+span {
+    font-weight: 200;
+    color: hsl(0, 36%, 70%);
+}
+
+p {
+    margin: 1.5rem 0 1.5rem 0;
+    line-height: 1.6;
+    font-size: 18px;
+    color: hsl(0, 36%, 70%);
+}
+
+form {
+    position: relative;
+}
+
+input {
+    padding: 15px 30px;
+    border-radius: 50px;
+    width: 450px;
+    height: 55px;
+    background-color: transparent;
+    border: hsl(0, 36%, 70%) 1px solid;
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 36%, 70%);
+    outline: none;
+}
+
+form.error input {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+button {
+    padding: 15px;
+    border-radius: 50px;
+    width: 100px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 55px;
+    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.error-icon {
+    position: absolute;
+    top: 15px;
+    right: 120px;
+    display: none;
+}
+
+form.error .error-icon {
+    display: block;
+}
+
+small {
+    display: none;
+    margin-top: 15px;
+    margin-left: 30px;
+    color: hsl(0, 93%, 68%);
+}
+
+form.error small {
+    display: block;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: hsl(0, 36%, 70%);
+}
+
+.right {
+    width: 40%;
+    background-image: url(./images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

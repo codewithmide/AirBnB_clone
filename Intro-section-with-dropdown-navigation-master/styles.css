@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    font-size: 16px;
+    background: hsl(0, 0%, 98%);
+    font-family: 'Epilogue', sans-serif;
+    color: hsl(0, 0%, 41%);
+    overflow-x: hidden;
+    display: block;
+}
+
+/* NAVBAR  STARTS */
+.navbar {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    display: grid;
+    grid-template-columns: 11% 76% 13%;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+.registeration {
+    display: flex;
+    align-items: center;
+}
+
+.registeration > p {
+    cursor: pointer;
+}
+
+.register {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+}
+
+li {
+    list-style: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+li:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 500;
+}
+
+a > img {
+    margin: 0 0 0.1em .2rem;
+}
+
+a {
+    text-decoration: none;
+    width: 100%;
+    color: hsl(0, 0%, 41%);
+    font-weight: 500;
+}
+
+a:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 500;
+}
+
+.logo {
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px 15px;
+    border: 2px solid hsl(0, 0%, 41%);
+    color: hsl(0, 0%, 41%);
+    outline: none;
+    background-color: transparent;
+    border-radius: 10px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: hsl(0, 0%, 8%);
+    border: 2px solid hsl(0, 0%, 8%);
+}
+
+.feature,
+.company {
+    position: relative;
+}
+
+.feature-dropdown {
+    display: block;
+    margin-top: .8rem;
+    width: 110px;
+    position: absolute;
+    padding: .8rem .8rem 0 .8rem;
+    right: 0rem;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.company-dropdown {
+    display: block;
+    margin-top: .8rem;
+    width: 95px;
+    position: absolute;
+    padding: .8rem .8rem 0 .8rem;
+    border-radius: 8px;
+    left: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.feature-dropdown > li,
+.company-dropdown > li {
+    margin-bottom: .6rem;
+    display: flex;
+    gap: .5rem;
+    font-size: 12px;
+    color: hsl(0, 0%, 41%);
+}
+
+.feature > ul {
+    display: none;
+}
+
+.feature:hover ul {
+    display: block;
+}
+
+.company > ul {
+    display: none;
+}
+
+.company:hover ul {
+    display: block;
+}
+
+/* NAVBAR ENDS */
+
+/* MAIN SECTION STARTS */
+
+main {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 4rem;
+    margin-top: 2.5rem;
+}
+
+/* MAIN SECTION STARTS ENDS*/
+
+/* LEFT SECTION STARTS */
+
+.left {
+    width: 38%;
+    height: 100%;
+    color: hsl(0, 0%, 8%);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+}
+
+h1 {
+    width: 100%;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.left > p {
+    width: 80%;
+    margin-top: -1rem;
+    font-size: 18px;
+    line-height: 1.5;
+    color: hsl(0, 0%, 41%);
+}
+
+.learn {
+    width: 29%;
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+}
+
+.learn:hover {
+    background-color: hsl(0, 0%, 98%);
+    color:hsl(0, 0%, 8%)
+}
+
+.clients {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+
+/* LEFT SECTION ENDS */
+
+
+/* RIGHT SECTION STARTS */
+
+.right {
+    width: 40%;
+    height: 100%;
+    background: url(./images/image-hero-desktop.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* RIGHT SECTION ENDS */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.bg-mobile {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar > section {
+        display: none;
+    }
+    .right {
+        display: none;
+    }
+    main {
+        width: 100%;
+        padding: 0;
+        display: block;
+        margin-bottom: 15rem;
+    }
+    .bg-mobile {
+        width: 100%;
+        display: block;
+    }
+    .left {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .desktop {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .left > p {
+        font-size: 16px;
+        color: hsl(0, 0%, 41%);
+        width: 90%;
+        text-align: center;
+        margin: 0 auto 2rem auto;
+        line-height: 1.5;
+    }
+    .learn  {
+        font-size: 14px;
+        width: 40%;
+        border-radius: 12px;
+        margin-bottom: 3rem;
+    }
+    .clients {
+        position: inherit;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .attribution {
+        bottom: 0;
+    }
+}
